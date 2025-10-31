@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio DX - Editor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/editor.css">
+</head>
+<body>
+    <!-- Header del Editor -->
+    <header class="editor-header">
+        <div class="header-content">
+            <button class="back-button" onclick="cancelEdit()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Cancelar
+            </button>
+            <button class="delete-button" onclick="deleteProject()" title="Eliminar Proyecto">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 6h18M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2m3 0v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6h14z"/>
+        <line x1="10" y1="11" x2="10" y2="17"/>
+        <line x1="14" y1="11" x2="14" y2="17"/>
+    </svg>
+</button>
+            
+            <div class="editor-title">
+                <h1 id="editorTitle">Editando Proyecto</h1>
+                <span class="editor-status" id="editorStatus">Sin guardar</span>
+            </div>
+            
+            <div class="editor-actions">
+                <!-- Botón de cambio de tema -->
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar tema">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                
+                <button class="btn-preview" onclick="previewProject()">
+                    👁️ Vista Previa
+                </button>
+                <button class="btn-save" onclick="saveProject()">
+                    💾 Guardar Cambios
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal del Editor -->
+    <main class="editor-content">
+        <div class="editor-container">
+            
+            <!-- Panel de Navegación Lateral -->
+            <aside class="editor-sidebar">
+                <h3>📋 Secciones</h3>
+                <nav class="editor-nav">
+                    <button class="editor-nav-btn active" data-section="basic" onclick="switchSection('basic')">
+                        ℹ️ Información Básica
+                    </button>
+                    <button class="editor-nav-btn" data-section="progress" onclick="switchSection('progress')">
+                        📊 Progreso y Fechas
+                    </button>
+                    <button class="editor-nav-btn" data-section="achievements" onclick="switchSection('achievements')">
+                        ✅ Logros Recientes
+                    </button>
+                    <button class="editor-nav-btn" data-section="blockers" onclick="switchSection('blockers')">
+                        ⚠️ Bloqueos
+                    </button>
+                    <button class="editor-nav-btn" data-section="nextsteps" onclick="switchSection('nextsteps')">
+                        🎯 Próximos Pasos
+                    </button>
+                    <button class="editor-nav-btn" data-section="media" onclick="switchSection('media')">
+                        🖼️ Multimedia
+                    </button>
+                </nav>
+            </aside>
+
+            <!-- Panel de Edición Principal -->
+            <section class="editor-main">
+                
+                <!-- Sección: Información Básica -->
+                <div class="editor-section active" id="section-basic">
+                    <h2 class="section-title">ℹ️ Información Básica</h2>
+                    
+                    <div class="form-group">
+                        <label for="projectIcon">Icono del Proyecto (Emoji)</label>
+                        <input type="text" id="projectIcon" placeholder="🌐" maxlength="2">
+                        <small>Usa un emoji que represente tu proyecto</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectTitle">Título del Proyecto</label>
+                        <input type="text" id="projectTitle" placeholder="Nombre del proyecto" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currentPhase">Fase Actual / Descripción</label>
+                        <textarea id="currentPhase" rows="4" placeholder="Describe en qué fase está el proyecto actualmente..." required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="projectStatus">Estado del Proyecto</label>
+                            <select id="projectStatus">
+                                <option value="in-progress">En Progreso</option>
+                                <option value="hold">Hold</option>
+                                <option value="discovery">Discovery</option>
+                                <option value="paused">Pausado</option>
+                                <option value="completed">Completado</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectPriority">Prioridad</label>
+                            <select id="projectPriority">
+                                <option value="high">Alta</option>
+                                <option value="medium">Media</option>
+                                <option value="low">Baja</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Progreso y Fechas -->
+                <div class="editor-section" id="section-progress">
+                    <h2 class="section-title">📊 Progreso y Fechas</h2>
+                    
+                    <div class="form-group">
+                        <label for="projectProgress">Progreso (%)</label>
+                        <div class="progress-input-group">
+                            <input type="range" id="projectProgress" min="0" max="100" value="0" oninput="updateProgressDisplay()">
+                            <span class="progress-value" id="progressValue">0%</span>
+                        </div>
+                        <div class="progress-bar-preview">
+                            <div class="progress-fill" id="progressFillPreview" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="targetDate">Fecha Objetivo</label>
+                        <input type="date" id="targetDate">
+                    </div>
+                </div>
+
+                <!-- Sección: Logros Recientes -->
+                <div class="editor-section" id="section-achievements">
+                    <h2 class="section-title">✅ Logros Recientes</h2>
+                    <p class="section-description">Agrega los hitos importantes que has alcanzado</p>
+                    
+                    <div id="achievementsList" class="dynamic-list">
+                        <!-- Se llenarán dinámicamente -->
+                    </div>
+                    
+                    <button class="btn-add" onclick="addAchievement()">
+                        + Agregar Logro
+                    </button>
+                </div>
+
+                <!-- Sección: Bloqueos -->
+                <div class="editor-section" id="section-blockers">
+                    <h2 class="section-title">⚠️ Bloqueos</h2>
+                    
+                    <div class="form-group">
+                        <label for="blockerType">Tipo de Bloqueo</label>
+                        <select id="blockerType">
+                            <option value="info">Información</option>
+                            <option value="warning">Atención</option>
+                            <option value="alert">Bloqueo Crítico</option>
+                            <option value="success">Sin Bloqueos</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="blockerMessage">Mensaje del Bloqueo</label>
+                        <textarea id="blockerMessage" rows="3" placeholder="Describe el bloqueo o estado actual..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Sección: Próximos Pasos -->
+                <div class="editor-section" id="section-nextsteps">
+                    <h2 class="section-title">🎯 Próximos Pasos</h2>
+                    <p class="section-description">Define los siguientes hitos del proyecto</p>
+                    
+                    <div id="nextStepsList" class="dynamic-list">
+                        <!-- Se llenarán dinámicamente -->
+                    </div>
+                    
+                    <button class="btn-add" onclick="addNextStep()">
+                        + Agregar Paso
+                    </button>
+                </div>
+
+                <!-- Sección: Multimedia -->
+                <div class="editor-section" id="section-media">
+                    <h2 class="section-title">🖼️ Multimedia</h2>
+                    
+                    <!-- Gantt -->
+                    <div class="media-subsection">
+                        <h3>📊 Diagrama de Gantt</h3>
+                        <div class="file-upload-area">
+                            <input type="file" id="ganttUpload" accept="image/*,application/pdf" onchange="handleGanttUpload(event)">
+                            <label for="ganttUpload" class="upload-label">
+                                <span class="upload-icon">📊</span>
+                                <span class="upload-text">Click para subir Gantt</span>
+                                <span class="upload-hint">PNG, JPG, PDF (Recomendado: 1920x1080px)</span>
+                            </label>
+                            <div id="ganttPreview" class="file-preview" style="display: none;">
+                                <img src="" alt="Gantt preview">
+                                <button class="btn-remove" onclick="removeGantt()">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Galería de Imágenes -->
+                    <div class="media-subsection">
+                        <h3>🖼️ Galería de Imágenes</h3>
+                        <div id="imagesList" class="media-grid">
+                            <!-- Se llenará dinámicamente -->
+                        </div>
+                        <button class="btn-add" onclick="triggerImageUpload()">
+                            + Agregar Imagen
+                        </button>
+                        <input type="file" id="imageUpload" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
+                    </div>
+
+                    <!-- Galería de Videos -->
+                    <div class="media-subsection">
+                        <h3>🎬 Galería de Videos</h3>
+                        <div id="videosList" class="media-grid">
+                            <!-- Se llenará dinámicamente -->
+                        </div>
+                        <button class="btn-add" onclick="triggerVideoUpload()">
+                            + Agregar Video
+                        </button>
+                        <input type="file" id="videoUpload" accept="video/*" style="display: none;" onchange="handleVideoUpload(event)">
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Modal de Confirmación al Guardar -->
+    <div id="saveModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">💾 Guardar Cambios</h3>
+                <button class="modal-close" onclick="closeSaveModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro de que quieres guardar los cambios?</p>
+                <p class="modal-hint">Los cambios se publicarán en tu portafolio.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeSaveModal()">Cancelar</button>
+                <button class="btn-primary" onclick="confirmSave()">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Vista Previa -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h3 class="modal-title">👁️ Vista Previa</h3>
+                <button class="modal-close" onclick="closePreviewModal()">×</button>
+            </div>
+            <div class="modal-body" id="previewContent">
+                <!-- Se generará la vista previa aquí -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Confirmación de Eliminación -->
+<div id="deleteModal" class="modal">
+    <div class="modal-content modal-delete">
+        <div class="modal-header">
+            <h3 class="modal-title">🗑️ Eliminar Proyecto</h3>
+            <button class="modal-close" onclick="closeDeleteModal()">×</button>
+        </div>
+        <div class="modal-body">
+            <div class="delete-warning">
+                <div class="warning-icon">⚠️</div>
+                <div>
+                    <h4>Esta acción no se puede deshacer</h4>
+                </div>
+            </div>
+            
+            <p>Estás a punto de eliminar permanentemente:</p>
+            
+            <div class="delete-project-info">
+                <strong id="deleteProjectTitle"></strong>
+            </div>
+            
+            <p class="delete-note">Se eliminarán todos los datos del proyecto incluyendo:</p>
+            <ul class="delete-list">
+                <li>📊 Diagrama de Gantt</li>
+                <li>🖼️ Galería de imágenes</li>
+                <li>🎬 Videos</li>
+                <li>📝 Todo el contenido del proyecto</li>
+            </ul>
+            
+            <div class="delete-confirm-box">
+                <label for="confirmDeleteText">
+                    Para confirmar, escribe el nombre del proyecto:
+                </label>
+                <input 
+                    type="text" 
+                    id="confirmDeleteText" 
+                    placeholder="Nombre del proyecto"
+                    autocomplete="off"
+                >
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-secondary" onclick="closeDeleteModal()">Cancelar</button>
+            <button class="btn-danger" onclick="confirmDelete()" id="btnConfirmDelete" disabled>
+                Eliminar Permanentemente
+            </button>
+        </div>
+    </div>
+</div>
+    <!-- Scripts -->
+<script src="js/file-manager.js"></script>
+<script src="js/init-data.js"></script>
+<script src="js/data-manager.js"></script>
+<script src="js/editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-dx",
+  "version": "1.0.0",
+  "description": "Portafolio Web DX - Sistema de gestión de proyectos",
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev"
+  },
+  "author": "DX Team",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0"
+  },
+  "dependencies": {}
+}

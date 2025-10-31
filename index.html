@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio DX - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+<div class="logo-section">
+    <img src="assets/LOGO QE DX.png" alt="DX Logo" class="dx-logo">
+    <div class="logo-text">
+        <h1 class="logo-title">Portfolio DX</h1>
+        <p class="logo-subtitle">Digital Transformation Team</p>
+    </div>
+</div>
+            <nav class="header-nav">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar tema">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                
+                <div class="user-section" id="userSection">
+                    <!-- Se llenará dinámicamente -->
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h2 class="hero-title">Transformación Digital</h2>
+            <p class="hero-description">
+                Plataforma interna para visualizar y gestionar proyectos del equipo DX
+            </p>
+        </section>
+
+        <!-- Stats Overview -->
+        <section class="stats-overview" id="statsOverview">
+            <!-- Se llenará dinámicamente -->
+        </section>
+
+        <!-- My Projects Section (Solo si está loggeado) -->
+        <section class="my-projects-section" id="myProjectsSection" style="display: none;">
+            <div class="section-header">
+                <h3 class="section-title">📂 Mis Proyectos</h3>
+                <button class="btn-primary" onclick="createNewProject()">
+                    <span>+</span> Nuevo Proyecto
+                </button>
+            </div>
+            <div class="projects-grid" id="myProjectsGrid">
+                <!-- Se llenará dinámicamente -->
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="featured-section">
+            <div class="section-header">
+                <h3 class="section-title">⭐ Proyectos Destacados</h3>
+                <div class="filter-buttons" id="filterButtons">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="in-progress">En Progreso</button>
+                    <button class="filter-btn" data-filter="hold">Hold</button>
+                    <button class="filter-btn" data-filter="discovery">Discovery</button>
+                </div>
+            </div>
+            <div class="projects-grid" id="featuredProjectsGrid">
+                <!-- Se llenará dinámicamente -->
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="section-header">
+                <h3 class="section-title">👥 Equipo DX</h3>
+            </div>
+            <div class="team-grid" id="teamGrid">
+                <!-- Se llenará dinámicamente -->
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    id="searchInput"
+                    placeholder="Buscar proyectos o personas..."
+                >
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </div>
+            <div class="search-results" id="searchResults" style="display: none;">
+                <!-- Se llenará dinámicamente -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2025 Digital Transformation Team. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content login-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">🔐 Iniciar Sesión</h3>
+                <button class="modal-close" onclick="closeLoginModal()">×</button>
+            </div>
+            <form class="login-form" id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        required
+                        placeholder="tu.usuario"
+                        autocomplete="username"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required
+                        placeholder="••••••••"
+                        autocomplete="current-password"
+                    >
+                </div>
+                <div class="form-error" id="loginError" style="display: none;">
+                    Usuario o contraseña incorrectos
+                </div>
+                <button type="submit" class="btn-primary btn-block">
+                    Iniciar Sesión
+                </button>
+            </form>
+            <div class="login-hint">
+                <p><strong>Usuarios de prueba:</strong></p>
+                <p>hiram.gonzalez / demo123</p>
+                <p>sandra.santos / demo123</p>
+                <p>miguel.coronado / demo123</p>
+                <p>brayan.rocha / demo123</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+<script src="js/file-manager.js"></script>
+<script src="js/init-data.js"></script>
+<script src="js/data-manager.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

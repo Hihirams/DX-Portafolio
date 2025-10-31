@@ -1,0 +1,62 @@
+{
+  "id": "proj002",
+  "ownerId": "user1",
+  "title": "QC ALT / DQITS",
+  "icon": "🧠",
+  "status": "hold",
+  "priority": "medium",
+  "progress": 55,
+  "targetDate": "2026-04-15",
+  "currentPhase": "Integración de detección y enlace IoT QueryLink (CSV automático)",
+  "achievements": {
+    "2025-08": "Arquitectura de flujo de video definida",
+    "2025-09": "Backend FastAPI y servidor local operativos",
+    "2025-10": "Pipeline de video validado + versión portable"
+  },
+  "blockers": {
+    "type": "alert",
+    "message": "En HOLD por pruebas de compatibilidad del enlace IoT / CSV. Se espera resolución en 1-2 semanas."
+  },
+  "nextSteps": {
+    "2025-11": "Finalizar integración IoT",
+    "2025-12": "Pruebas piloto con múltiples cámaras",
+    "2026-01": "Automatización y documentación final"
+  },
+  "videos": [
+    {
+      "path": "users/user1/projects/proj002/videos/Demo_v1.0.1_DQITS.mp4",
+      "title": "Demo_v1.0.1_DQITS",
+      "fileName": "Demo_v1.0.1_DQITS.mp4",
+      "fileType": "video/mp4",
+      "fileSize": 9649364
+    }
+  ],
+  "images": [
+    {
+      "path": "users/user1/projects/proj002/images/DQITS1.png",
+      "title": "DQITS1",
+      "fileName": "DQITS1.png",
+      "fileType": "image/png",
+      "fileSize": 321520
+    },
+    {
+      "path": "users/user1/projects/proj002/images/DQITS2.png",
+      "title": "DQITS2",
+      "fileName": "DQITS2.png",
+      "fileType": "image/png",
+      "fileSize": 262712
+    },
+    {
+      "path": "users/user1/projects/proj002/images/DQITS3.png",
+      "title": "DQITS3",
+      "fileName": "DQITS3.png",
+      "fileType": "image/png",
+      "fileSize": 70253
+    }
+  ],
+  "createdAt": "2025-08-01",
+  "updatedAt": "2025-10-31",
+  "ganttImageType": "image/png",
+  "ganttImageName": "2.png",
+  "ganttImagePath": "users/user1/projects/proj002/gantt/gantt.png"
+}

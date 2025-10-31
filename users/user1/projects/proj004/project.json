@@ -1,0 +1,29 @@
+{
+  "id": "proj004",
+  "ownerId": "user1",
+  "title": "MRM Web Forum",
+  "icon": "📋",
+  "status": "discovery",
+  "priority": "low",
+  "progress": 20,
+  "targetDate": "2026-06-30",
+  "currentPhase": "Explorar plataforma web interna para gestionar reportes MRM (Monthly Review Meeting) y compartir información entre departamentos",
+  "achievements": {
+    "2025-10": "Entrevistas con usuarios iniciadas",
+    "2025-10-20": "Revisión de herramientas internas completada"
+  },
+  "blockers": {
+    "type": "info",
+    "message": "En fase de discovery. Sin bloqueos actuales."
+  },
+  "nextSteps": {
+    "2025-11": "Completar entrevistas con usuarios",
+    "2025-12": "Presentación de hallazgos y decisión sobre desarrollo",
+    "2026-01": "Definir alcance y arquitectura (si aprobado)"
+  },
+  "ganttImage": "",
+  "videos": [],
+  "images": [],
+  "createdAt": "2025-10-15",
+  "updatedAt": "2025-10-30"
+}

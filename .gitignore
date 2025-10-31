@@ -1,0 +1,11 @@
+# Ignorar dependencias de Node
+node_modules/
+
+# Archivos temporales / logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "user1",
+      "username": "hiram",
+      "password": "password123",
+      "name": "Hiram",
+      "role": "DX Engineer",
+      "email": "hiram@dx.com",
+      "avatar": null,
+      "createdAt": "2025-10-31T21:23:03.365Z"
+    },
+    {
+      "id": "user2",
+      "username": "ana",
+      "password": "password123",
+      "name": "Ana García",
+      "role": "DX Lead",
+      "email": "ana@dx.com",
+      "avatar": null,
+      "createdAt": "2025-10-31T21:23:03.368Z"
+    }
+  ]
+}

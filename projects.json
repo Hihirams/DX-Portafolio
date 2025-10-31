@@ -1,0 +1,243 @@
+{
+  "projects": [
+    {
+      "id": "proj001",
+      "ownerId": "user1",
+      "title": "Quality Clinic Unity",
+      "icon": "🌐",
+      "status": "in-progress",
+      "priority": "high",
+      "progress": 60,
+      "targetDate": "2026-09-15",
+      "currentPhase": "Preparación del piloto IoT/MES para mostrar KPIs en tiempo real dentro del entorno 3D de planta",
+      "achievements": {
+        "2025-08": "Diseño conceptual y objetivos visuales definidos",
+        "2025-09": "Entorno 3D interactivo de navegación completado",
+        "2025-10": "Escalabilidad validada con múltiples zonas"
+      },
+      "blockers": {
+        "type": "warning",
+        "message": "Sin bloqueos críticos. Enlace IoT/MES pendiente de pruebas de red interna"
+      },
+      "nextSteps": {
+        "2025-11": "Integrar datos en tiempo real desde IoT/MES",
+        "2025-12": "Piloto con KPIs vivos y tarjetas dinámicas",
+        "2026-01": "Documentación y presentación corporativa"
+      },
+      "ganttImage": "users/user1/gantt/1.png",
+      "videos": [
+        {
+          "src": "users/user1/videos/Demo_0.9.5_QCU.mp4",
+          "title": "Demo 0.9.5"
+        }
+      ],
+      "images": [
+        {
+          "src": "users/user1/images/QCU1.png",
+          "title": "Vista inicial Planeta"
+        },
+        {
+          "src": "users/user1/images/QCU2.png",
+          "title": "Vista libre MTS"
+        },
+        {
+          "src": "users/user1/images/QCU3.PNG",
+          "title": "Vista Cenital"
+        },
+        {
+          "src": "users/user1/images/QCU4.png",
+          "title": "Datos en vivo API REST"
+        }
+      ],
+      "createdAt": "2025-08-01",
+      "updatedAt": "2025-10-30"
+    },
+    {
+      "id": "proj002",
+      "ownerId": "user1",
+      "title": "QC ALT / DQITS",
+      "icon": "🧠",
+      "status": "hold",
+      "priority": "medium",
+      "progress": 55,
+      "targetDate": "2026-04-15",
+      "currentPhase": "Integración de detección y enlace IoT QueryLink (CSV automático)",
+      "achievements": {
+        "2025-08": "Arquitectura de flujo de video definida",
+        "2025-09": "Backend FastAPI y servidor local operativos",
+        "2025-10": "Pipeline de video validado + versión portable"
+      },
+      "blockers": {
+        "type": "alert",
+        "message": "En HOLD por pruebas de compatibilidad del enlace IoT / CSV. Se espera resolución en 1-2 semanas."
+      },
+      "nextSteps": {
+        "2025-11": "Finalizar integración IoT",
+        "2025-12": "Pruebas piloto con múltiples cámaras",
+        "2026-01": "Automatización y documentación final"
+      },
+      "ganttImage": "users/user1/gantt/2.png",
+      "videos": [
+        {
+          "src": "users/user1/videos/Demo_v1.0.1_DQITS.mp4",
+          "title": "Detección en Acción"
+        }
+      ],
+      "images": [
+        {
+          "src": "users/user1/images/DQITS1.png",
+          "title": "Interfaz Principal"
+        },
+        {
+          "src": "users/user1/images/DQITS2.png",
+          "title": "Detección Activa"
+        },
+        {
+          "src": "users/user1/images/DQITS3.png",
+          "title": "Respuesta de FASTAPI"
+        }
+      ],
+      "createdAt": "2025-08-01",
+      "updatedAt": "2025-10-30"
+    },
+    {
+      "id": "proj003",
+      "ownerId": "user1",
+      "title": "AI Camera",
+      "icon": "🎥",
+      "status": "in-progress",
+      "priority": "medium",
+      "progress": 45,
+      "targetDate": "2026-10-30",
+      "currentPhase": "Desarrollo de prototipo de detección de movimiento y modelos de reconocimiento",
+      "achievements": {
+        "2025-10": "Fundamentos del sistema y editor desarrollados",
+        "2025-10-15": "Prototipo de detección de movimiento en ROIs completado"
+      },
+      "blockers": {
+        "type": "warning",
+        "message": "Sin bloqueos formales. Evaluando rendimiento de modelos antes del escalado a múltiples cámaras."
+      },
+      "nextSteps": {
+        "2025-11": "Integrar detección de personas, manos y rostros",
+        "2025-12": "Interfaz unificada de control y visualización",
+        "2026-01": "Optimización para múltiples cámaras"
+      },
+      "ganttImage": "users/user1/gantt/4.png",
+      "videos": [
+        {
+          "src": "users/user1/videos/Demo_v1.1.2_AICAMERA.mp4",
+          "title": "Detección de Movimiento"
+        },
+        {
+          "src": "users/user1/videos/Demo2_v1.1.2_AICAMERA.mp4",
+          "title": "Visión de Operador"
+        }
+      ],
+      "images": [
+        {
+          "src": "users/user1/images/AICAMERA1.png",
+          "title": "Interfaz de programa"
+        },
+        {
+          "src": "users/user1/images/AICAMERA2.png",
+          "title": "Multi Visión"
+        },
+        {
+          "src": "users/user1/images/AICAMERA3.png",
+          "title": "Interfaz de Operador"
+        },
+        {
+          "src": "users/user1/images/AICAMERA4.png",
+          "title": "Editor de RIO"
+        },
+        {
+          "src": "users/user1/images/AICAMERA5.png",
+          "title": "Detección en vivo"
+        },
+        {
+          "src": "users/user1/images/AICAMERA6.png",
+          "title": "Alerta y detección de objeto"
+        }
+      ],
+      "createdAt": "2025-10-01",
+      "updatedAt": "2025-10-30"
+    },
+    {
+      "id": "proj004",
+      "ownerId": "user1",
+      "title": "MRM Web Forum",
+      "icon": "📋",
+      "status": "discovery",
+      "priority": "low",
+      "progress": 20,
+      "targetDate": "2026-06-30",
+      "currentPhase": "Explorar plataforma web interna para gestionar reportes MRM (Monthly Review Meeting) y compartir información entre departamentos",
+      "achievements": {
+        "2025-10": "Entrevistas con usuarios iniciadas",
+        "2025-10-20": "Revisión de herramientas internas completada"
+      },
+      "blockers": {
+        "type": "info",
+        "message": "En fase de discovery. Sin bloqueos actuales."
+      },
+      "nextSteps": {
+        "2025-11": "Completar entrevistas con usuarios",
+        "2025-12": "Presentación de hallazgos y decisión sobre desarrollo",
+        "2026-01": "Definir alcance y arquitectura (si aprobado)"
+      },
+      "ganttImage": "",
+      "videos": [],
+      "images": [],
+      "createdAt": "2025-10-15",
+      "updatedAt": "2025-10-30"
+    },
+    {
+      "id": "proj005",
+      "ownerId": "user1",
+      "title": "LorenzoBot",
+      "icon": "🤖",
+      "status": "paused",
+      "priority": "low",
+      "progress": 85,
+      "targetDate": "2026-03-15",
+      "currentPhase": "Bot operativo en entorno local. Despliegue en HOLD por decisiones de infraestructura IT.",
+      "achievements": {
+        "2025-06": "Desarrollo del bot completado",
+        "2025-08": "Pruebas locales exitosas",
+        "2025-09": "Integración con sistemas internos validada"
+      },
+      "blockers": {
+        "type": "alert",
+        "message": "Sin entorno web interno oficial. Pendiente confirmación de IT."
+      },
+      "nextSteps": {
+        "2026-01": "Revisión con IT sobre infraestructura",
+        "2026-03": "Reactivación estimada si se aprueba despliegue"
+      },
+      "ganttImage": "users/user1/gantt/3.png",
+      "videos": [
+        {
+          "src": "users/user1/videos/Demo_v1.3.0_DENBOT.mp4",
+          "title": "Bot en Acción"
+        }
+      ],
+      "images": [
+        {
+          "src": "users/user1/images/DENBOT1.png",
+          "title": "Interfaz Bot"
+        },
+        {
+          "src": "users/user1/images/DENBOT2.png",
+          "title": "Reportes"
+        },
+        {
+          "src": "users/user1/images/DENBOT3.png",
+          "title": "Flujo General"
+        }
+      ],
+      "createdAt": "2025-06-01",
+      "updatedAt": "2025-10-30"
+    }
+  ]
+}

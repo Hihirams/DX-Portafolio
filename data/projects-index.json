@@ -1,0 +1,254 @@
+{
+  "projects": [
+    {
+      "id": "proj001",
+      "title": "Quality Clinic Unity",
+      "icon": "🌐",
+      "currentPhase": "Preparación del piloto IoT/MES para mostrar KPIs en tiempo real dentro del entorno 3D de planta",
+      "status": "in-progress",
+      "priority": "high",
+      "progress": 60,
+      "targetDate": "2026-09-15",
+      "ownerId": "user1",
+      "createdAt": "2025-08-01",
+      "updatedAt": "2025-10-31",
+      "achievements": {
+        "2025-08": "Diseño conceptual y objetivos visuales definidos",
+        "2025-09": "Entorno 3D interactivo de navegación completado",
+        "2025-10": "Escalabilidad validada con múltiples zonas"
+      },
+      "blockers": {
+        "type": "warning",
+        "message": "Sin bloqueos críticos. Enlace IoT/MES pendiente de pruebas de red interna"
+      },
+      "nextSteps": {
+        "2025-11": "Integrar datos en tiempo real desde IoT/MES",
+        "2025-12": "Piloto con KPIs vivos y tarjetas dinámicas",
+        "2026-01": "Documentación y presentación corporativa"
+      },
+      "ganttImage": "users/user1/projects/proj001/gantt/gantt.png",
+      "images": [
+        {
+          "src": "users/user1/projects/proj001/images/QCU1.png",
+          "title": "QCU1"
+        },
+        {
+          "src": "users/user1/projects/proj001/images/QCU2.png",
+          "title": "QCU2"
+        },
+        {
+          "src": "users/user1/projects/proj001/images/QCU3.png",
+          "title": "QCU3"
+        },
+        {
+          "src": "users/user1/projects/proj001/images/QCU4.png",
+          "title": "QCU4"
+        }
+      ],
+      "videos": [
+        {
+          "src": "users/user1/projects/proj001/videos/Demo_0.9.5_QCU.mp4",
+          "title": "Demo_0.9.5_QCU"
+        }
+      ],
+      "hasGantt": true,
+      "imageCount": 4,
+      "videoCount": 1
+    },
+    {
+      "id": "proj002",
+      "title": "QC ALT / DQITS",
+      "icon": "🧠",
+      "currentPhase": "Integración de detección y enlace IoT QueryLink (CSV automático)",
+      "status": "hold",
+      "priority": "medium",
+      "progress": 55,
+      "targetDate": "2026-04-15",
+      "ownerId": "user1",
+      "createdAt": "2025-08-01",
+      "updatedAt": "2025-10-31",
+      "achievements": {
+        "2025-08": "Arquitectura de flujo de video definida",
+        "2025-09": "Backend FastAPI y servidor local operativos",
+        "2025-10": "Pipeline de video validado + versión portable"
+      },
+      "blockers": {
+        "type": "alert",
+        "message": "En HOLD por pruebas de compatibilidad del enlace IoT / CSV. Se espera resolución en 1-2 semanas."
+      },
+      "nextSteps": {
+        "2025-11": "Finalizar integración IoT",
+        "2025-12": "Pruebas piloto con múltiples cámaras",
+        "2026-01": "Automatización y documentación final"
+      },
+      "ganttImage": "users/user1/projects/proj002/gantt/gantt.png",
+      "images": [
+        {
+          "src": "users/user1/projects/proj002/images/DQITS1.png",
+          "title": "DQITS1"
+        },
+        {
+          "src": "users/user1/projects/proj002/images/DQITS2.png",
+          "title": "DQITS2"
+        },
+        {
+          "src": "users/user1/projects/proj002/images/DQITS3.png",
+          "title": "DQITS3"
+        }
+      ],
+      "videos": [
+        {
+          "src": "users/user1/projects/proj002/videos/Demo_v1.0.1_DQITS.mp4",
+          "title": "Demo_v1.0.1_DQITS"
+        }
+      ],
+      "hasGantt": true,
+      "imageCount": 3,
+      "videoCount": 1
+    },
+    {
+      "id": "proj003",
+      "title": "AI Camera",
+      "icon": "🎥",
+      "currentPhase": "Desarrollo de prototipo de detección de movimiento y modelos de reconocimiento",
+      "status": "in-progress",
+      "priority": "medium",
+      "progress": 45,
+      "targetDate": "2026-10-30",
+      "ownerId": "user1",
+      "createdAt": "2025-10-01",
+      "updatedAt": "2025-10-31",
+      "achievements": {
+        "2025-10": "Fundamentos del sistema y editor desarrollados",
+        "2025-10-15": "Prototipo de detección de movimiento en ROIs completado"
+      },
+      "blockers": {
+        "type": "warning",
+        "message": "Sin bloqueos formales. Evaluando rendimiento de modelos antes del escalado a múltiples cámaras."
+      },
+      "nextSteps": {
+        "2025-11": "Integrar detección de personas, manos y rostros",
+        "2025-12": "Interfaz unificada de control y visualización",
+        "2026-01": "Optimización para múltiples cámaras"
+      },
+      "ganttImage": "users/user1/projects/proj003/gantt/gantt.png",
+      "images": [
+        {
+          "src": "users/user1/projects/proj003/images/AICAMERA1.png",
+          "title": "AICAMERA1"
+        },
+        {
+          "src": "users/user1/projects/proj003/images/AICAMERA2.png",
+          "title": "AICAMERA2"
+        },
+        {
+          "src": "users/user1/projects/proj003/images/AICAMERA3.png",
+          "title": "AICAMERA3"
+        },
+        {
+          "src": "users/user1/projects/proj003/images/AICAMERA4.png",
+          "title": "AICAMERA4"
+        },
+        {
+          "src": "users/user1/projects/proj003/images/AICAMERA5.png",
+          "title": "AICAMERA5"
+        },
+        {
+          "src": "users/user1/projects/proj003/images/AICAMERA6.png",
+          "title": "AICAMERA6"
+        }
+      ],
+      "videos": [
+        {
+          "src": "users/user1/projects/proj003/videos/Demo_v1.1.2_AICAMERA.mp4",
+          "title": "Demo_v1.1.2_AICAMERA"
+        }
+      ],
+      "hasGantt": true,
+      "imageCount": 6,
+      "videoCount": 1
+    },
+    {
+      "id": "proj004",
+      "title": "MRM Web Forum",
+      "icon": "📋",
+      "currentPhase": "Explorar plataforma web interna para gestionar reportes MRM (Monthly Review Meeting) y compartir información entre departamentos",
+      "status": "discovery",
+      "priority": "low",
+      "progress": 20,
+      "targetDate": "2026-06-30",
+      "ownerId": "user1",
+      "createdAt": "2025-10-15",
+      "updatedAt": "2025-10-30",
+      "achievements": {
+        "2025-10": "Entrevistas con usuarios iniciadas",
+        "2025-10-20": "Revisión de herramientas internas completada"
+      },
+      "blockers": {
+        "type": "info",
+        "message": "En fase de discovery. Sin bloqueos actuales."
+      },
+      "nextSteps": {
+        "2025-11": "Completar entrevistas con usuarios",
+        "2025-12": "Presentación de hallazgos y decisión sobre desarrollo",
+        "2026-01": "Definir alcance y arquitectura (si aprobado)"
+      },
+      "ganttImage": "",
+      "images": [],
+      "videos": [],
+      "hasGantt": false,
+      "imageCount": 0,
+      "videoCount": 0
+    },
+    {
+      "id": "proj005",
+      "title": "LorenzoBot",
+      "icon": "🤖",
+      "currentPhase": "Bot operativo en entorno local. Despliegue en HOLD por decisiones de infraestructura IT.",
+      "status": "paused",
+      "priority": "low",
+      "progress": 85,
+      "targetDate": "2026-03-15",
+      "ownerId": "user1",
+      "createdAt": "2025-06-01",
+      "updatedAt": "2025-10-31",
+      "achievements": {
+        "2025-06": "Desarrollo del bot completado",
+        "2025-08": "Pruebas locales exitosas",
+        "2025-09": "Integración con sistemas internos validada"
+      },
+      "blockers": {
+        "type": "alert",
+        "message": "Sin entorno web interno oficial. Pendiente confirmación de IT."
+      },
+      "nextSteps": {
+        "2026-01": "Revisión con IT sobre infraestructura",
+        "2026-03": "Reactivación estimada si se aprueba despliegue"
+      },
+      "ganttImage": "users/user1/projects/proj005/gantt/gantt.png",
+      "images": [
+        {
+          "src": "users/user1/projects/proj005/images/DENBOT1.png",
+          "title": "DENBOT1"
+        },
+        {
+          "src": "users/user1/projects/proj005/images/DENBOT2.png",
+          "title": "DENBOT2"
+        },
+        {
+          "src": "users/user1/projects/proj005/images/DENBOT3.png",
+          "title": "DENBOT3"
+        }
+      ],
+      "videos": [
+        {
+          "src": "users/user1/projects/proj005/videos/Demo_v1.3.0_DENBOT.mp4",
+          "title": "Demo_v1.3.0_DENBOT"
+        }
+      ],
+      "hasGantt": true,
+      "imageCount": 3,
+      "videoCount": 1
+    }
+  ]
+}

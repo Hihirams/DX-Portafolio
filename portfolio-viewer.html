@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio DX - Visor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/viewer.css">
+</head>
+<body>
+    <!-- Back Button -->
+    <button class="back-button" onclick="goBack()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Volver al Home
+    </button>
+
+      <!-- Logo DX -->
+    <!-- Logo DX -->
+    <div class="dx-branding">
+        <img src="assets/LOGO QE DX.png" alt="DX Logo" class="viewer-logo">
+    </div>
+
+    <div class="presentation-container">
+        <!-- Slide 1: Portada -->
+        <div class="slide active" data-slide="1" id="coverSlide">
+            <!-- Se generará dinámicamente -->
+        </div>
+
+        <!-- Slides de proyectos se insertarán dinámicamente aquí -->
+
+        <!-- Slide final: Resumen -->
+        <div class="slide" id="summarySlide">
+            <!-- Se generará dinámicamente -->
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-arrow left" onclick="previousSlide()">
+        <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+    </div>
+    <div class="nav-arrow right" onclick="nextSlide()">
+        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+    </div>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter">
+        <span id="current-slide">1</span> / <span id="total-slides">0</span>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar tema">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <!-- Modal Gantt -->
+    <div id="ganttModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Gantt del Proyecto</h3>
+                <button class="modal-close" onclick="closeGanttModal()">×</button>
+            </div>
+            <div class="modal-image-container">
+                <img id="ganttImage" src="" alt="Gantt Chart" class="modal-image" onclick="toggleZoom(this, event)">
+                <div class="zoom-indicator">Zoom: <span id="zoomLevel">100%</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Gallery Modal -->
+    <div id="videoGalleryModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="videoGalleryTitle">Galería de Videos</h3>
+                <button class="modal-close" onclick="closeVideoGallery()">×</button>
+            </div>
+            <div class="gallery-grid" id="videoGalleryGrid"></div>
+        </div>
+    </div>
+
+    <!-- Image Gallery Modal -->
+    <div id="imageGalleryModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="imageGalleryTitle">Galería de Imágenes</h3>
+                <button class="modal-close" onclick="closeImageGallery()">×</button>
+            </div>
+            <div class="gallery-grid" id="imageGalleryGrid"></div>
+        </div>
+    </div>
+
+    <!-- Video Player Modal -->
+    <div id="videoPlayerModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="videoPlayerTitle">Video</h3>
+                <button class="modal-close" onclick="closeVideoPlayer()">×</button>
+            </div>
+            <div class="modal-image-container">
+                <video id="videoPlayer" class="video-player" controls>
+                    <source src="" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="imageLightboxModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="imageLightboxTitle">Imagen</h3>
+                <button class="modal-close" onclick="closeImageLightbox()">×</button>
+            </div>
+            <div class="modal-image-container">
+                <img id="lightboxImage" src="" alt="Imagen ampliada" class="lightbox-image" onclick="closeImageLightbox()">
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+<script src="js/file-manager.js"></script>
+<script src="js/data-manager.js"></script>
+<script src="js/init-data.js"></script>
+    <script src="js/viewer.js"></script>
+</body>
+</html>

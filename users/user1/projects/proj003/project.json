@@ -1,0 +1,82 @@
+{
+  "id": "proj003",
+  "ownerId": "user1",
+  "title": "AI Camera",
+  "icon": "🎥",
+  "status": "in-progress",
+  "priority": "medium",
+  "progress": 45,
+  "targetDate": "2026-10-30",
+  "currentPhase": "Desarrollo de prototipo de detección de movimiento y modelos de reconocimiento",
+  "achievements": {
+    "2025-10": "Fundamentos del sistema y editor desarrollados",
+    "2025-10-15": "Prototipo de detección de movimiento en ROIs completado"
+  },
+  "blockers": {
+    "type": "warning",
+    "message": "Sin bloqueos formales. Evaluando rendimiento de modelos antes del escalado a múltiples cámaras."
+  },
+  "nextSteps": {
+    "2025-11": "Integrar detección de personas, manos y rostros",
+    "2025-12": "Interfaz unificada de control y visualización",
+    "2026-01": "Optimización para múltiples cámaras"
+  },
+  "videos": [
+    {
+      "path": "users/user1/projects/proj003/videos/Demo_v1.1.2_AICAMERA.mp4",
+      "title": "Demo_v1.1.2_AICAMERA",
+      "fileName": "Demo_v1.1.2_AICAMERA.mp4",
+      "fileType": "video/mp4",
+      "fileSize": 17820721
+    }
+  ],
+  "images": [
+    {
+      "path": "users/user1/projects/proj003/images/AICAMERA1.png",
+      "title": "AICAMERA1",
+      "fileName": "AICAMERA1.png",
+      "fileType": "image/png",
+      "fileSize": 360157
+    },
+    {
+      "path": "users/user1/projects/proj003/images/AICAMERA2.png",
+      "title": "AICAMERA2",
+      "fileName": "AICAMERA2.png",
+      "fileType": "image/png",
+      "fileSize": 422320
+    },
+    {
+      "path": "users/user1/projects/proj003/images/AICAMERA3.png",
+      "title": "AICAMERA3",
+      "fileName": "AICAMERA3.png",
+      "fileType": "image/png",
+      "fileSize": 222186
+    },
+    {
+      "path": "users/user1/projects/proj003/images/AICAMERA4.png",
+      "title": "AICAMERA4",
+      "fileName": "AICAMERA4.png",
+      "fileType": "image/png",
+      "fileSize": 759079
+    },
+    {
+      "path": "users/user1/projects/proj003/images/AICAMERA5.png",
+      "title": "AICAMERA5",
+      "fileName": "AICAMERA5.png",
+      "fileType": "image/png",
+      "fileSize": 661170
+    },
+    {
+      "path": "users/user1/projects/proj003/images/AICAMERA6.png",
+      "title": "AICAMERA6",
+      "fileName": "AICAMERA6.png",
+      "fileType": "image/png",
+      "fileSize": 651438
+    }
+  ],
+  "createdAt": "2025-10-01",
+  "updatedAt": "2025-10-31",
+  "ganttImageType": "image/png",
+  "ganttImageName": "4.png",
+  "ganttImagePath": "users/user1/projects/proj003/gantt/gantt.png"
+}

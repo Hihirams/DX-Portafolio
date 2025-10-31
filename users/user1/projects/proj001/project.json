@@ -1,0 +1,69 @@
+{
+  "id": "proj001",
+  "ownerId": "user1",
+  "title": "Quality Clinic Unity",
+  "icon": "🌐",
+  "status": "in-progress",
+  "priority": "high",
+  "progress": 60,
+  "targetDate": "2026-09-15",
+  "currentPhase": "Preparación del piloto IoT/MES para mostrar KPIs en tiempo real dentro del entorno 3D de planta",
+  "achievements": {
+    "2025-08": "Diseño conceptual y objetivos visuales definidos",
+    "2025-09": "Entorno 3D interactivo de navegación completado",
+    "2025-10": "Escalabilidad validada con múltiples zonas"
+  },
+  "blockers": {
+    "type": "warning",
+    "message": "Sin bloqueos críticos. Enlace IoT/MES pendiente de pruebas de red interna"
+  },
+  "nextSteps": {
+    "2025-11": "Integrar datos en tiempo real desde IoT/MES",
+    "2025-12": "Piloto con KPIs vivos y tarjetas dinámicas",
+    "2026-01": "Documentación y presentación corporativa"
+  },
+  "videos": [
+    {
+      "path": "users/user1/projects/proj001/videos/Demo_0.9.5_QCU.mp4",
+      "title": "Demo_0.9.5_QCU",
+      "fileName": "Demo_0.9.5_QCU.mp4",
+      "fileType": "video/mp4",
+      "fileSize": 43984986
+    }
+  ],
+  "images": [
+    {
+      "path": "users/user1/projects/proj001/images/QCU1.png",
+      "title": "QCU1",
+      "fileName": "QCU1.png",
+      "fileType": "image/png",
+      "fileSize": 179879
+    },
+    {
+      "path": "users/user1/projects/proj001/images/QCU2.png",
+      "title": "QCU2",
+      "fileName": "QCU2.png",
+      "fileType": "image/png",
+      "fileSize": 518104
+    },
+    {
+      "path": "users/user1/projects/proj001/images/QCU3.png",
+      "title": "QCU3",
+      "fileName": "QCU3.png",
+      "fileType": "image/png",
+      "fileSize": 299774
+    },
+    {
+      "path": "users/user1/projects/proj001/images/QCU4.png",
+      "title": "QCU4",
+      "fileName": "QCU4.png",
+      "fileType": "image/png",
+      "fileSize": 456076
+    }
+  ],
+  "createdAt": "2025-08-01",
+  "updatedAt": "2025-10-31",
+  "ganttImageType": "image/png",
+  "ganttImageName": "1.png",
+  "ganttImagePath": "users/user1/projects/proj001/gantt/gantt.png"
+}
